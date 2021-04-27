@@ -24,8 +24,11 @@ public class DrinkSubCategory {
 	private String name;
 	
 	@ManyToOne
-	private DrinkCategory category;
+	private DrinkCategory dCategory;
 	
 	private String imageUrl;
+	
+    @ManyToOne
+	private Category category;
 
 }

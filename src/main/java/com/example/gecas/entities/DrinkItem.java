@@ -33,6 +33,8 @@ public class DrinkItem {
     
     private String imageUrl;
     
+    private Boolean isAvailable;
+    
     
     
 

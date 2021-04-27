@@ -1,5 +1,6 @@
 package com.example.gecas.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -30,16 +31,18 @@ public class FoodItem {
 	private Double price;
 	
 	@ManyToOne
-	private FoodSubCategory subCategory;
+	private FoodCategory foodCategory;
 	
 	@ManyToMany
-	private List<Ingredient> igredients;
+	private List<Ingredient> igredients = new ArrayList<>();
 	
 	private String description;
 	
+	private String imageUrl;
+	
 	private Boolean isAvailable;
 	
-	private String imageUrl;
+	
 	
 	
 
