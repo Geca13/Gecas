@@ -1,5 +1,7 @@
 package com.example.gecas.entities;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,5 +26,7 @@ public class Category {
 	private String category;
 	
 	private String imageUrl;
+	
+	private List<SubCategory> subs;
 
 }

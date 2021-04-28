@@ -29,11 +29,14 @@ public class DrinkItem {
     private Double price;
     
     @ManyToOne
-    private DrinkSubCategory drinkSubCategory;
+    private SubCategory sub;
     
     private String imageUrl;
     
     private Boolean isAvailable;
+    
+    @ManyToOne
+    private DrinkCategory drCategory;
     
     
     

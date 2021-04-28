@@ -29,7 +29,7 @@ public class DesertItem {
 	private String name;
 	
 	@ManyToOne
-	private DesertCategory category;
+	private SubCategory sub;
 	
 	private Double price;
 	
