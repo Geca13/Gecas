@@ -22,8 +22,6 @@ public class DrinkCategory {
 	
 	private String description;
 	
-	private String imageUrl;
-	
 	
 	
 

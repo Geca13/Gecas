@@ -36,14 +36,9 @@ public class FoodItem {
 	@ManyToMany
 	private List<Ingredient> igredients = new ArrayList<>();
 	
-	private String description;
 	
 	private String imageUrl;
 	
 	private Boolean isAvailable;
 	
-	
-	
-	
-
 }
