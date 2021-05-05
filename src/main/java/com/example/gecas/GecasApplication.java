@@ -334,7 +334,7 @@ public class GecasApplication {
 			dessert.add(subRepository.findById(8L).get());
 			
 			
-			categoryRepository.save(new Category(1L,"Food","https://previews.123rf.com/images/fdsstudio/fdsstudio1905/fdsstudio190500013/122776211-food-icon-on-white-background-cutlery-as-a-symbol-of-food-vector-logo-for-graphic-design-.jpg", food));
+			categoryRepository.save(new Category(1L,"Food","https://previews.123rf.com/images/fdsstudio/fdsstudio1905/fdsstudio190500013/122776211-food-icon-on-white-background-cutlery-as-a-symbol-of-food-vector-logo-for-graphic-design-.jpg",food));
 			categoryRepository.save(new Category(2L,"Drink","https://i.pinimg.com/564x/c9/fd/a3/c9fda33a9ee8c9d1e12dba51552753bf.jpg",drink));
 			categoryRepository.save(new Category(3L,"Desert","https://img.freepik.com/free-vector/dessert-icon-bakery-design-vector-graphic_24908-24791.jpg?size=338&ext=jpg",dessert));
 			
