@@ -63,7 +63,7 @@ public class GecasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GecasApplication.class, args);
 	}
-	/*
+	
 	@PostConstruct
 	public void init() {
 		
@@ -432,6 +432,6 @@ public class GecasApplication {
 	
 	
 }
-*/
+
 
 }

@@ -58,10 +58,7 @@ public class MenuController {
 		return categoryRepository.findAll();
 	}
 	
-	public List<SubCategory> findSubCategoryByCategoryId(@PathVariable("id")Long id) {
-		
-		return subRepository.findAllByCategoryId(id);
-	}
+	
 	
 	public List<DrinkItem> findAllDrinksByDrinkCategoryId(Long id) {
 		

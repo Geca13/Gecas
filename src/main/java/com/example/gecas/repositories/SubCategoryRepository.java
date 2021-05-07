@@ -10,6 +10,6 @@ import com.example.gecas.entities.SubCategory;
 @Repository
 public interface SubCategoryRepository extends JpaRepository<SubCategory, Long> {
 
-	List<SubCategory> findAllByCategoryId(Long id);
+	
 
 }
