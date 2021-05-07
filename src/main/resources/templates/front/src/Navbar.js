@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {FaBars, FaTwitter } from 'react-icons/fa'
+import CategoryService from './service/CategoryService'
 
 class Navbar extends Component {
     constructor(props) {
@@ -8,6 +9,11 @@ class Navbar extends Component {
         this.state = {
            categories: []
         }
+    }
+    componentDidMount(){
+      CategoryService.getCategories().then((response) =>{
+         this.setState({categories: response.data});
+      });
     }
 
     render() {

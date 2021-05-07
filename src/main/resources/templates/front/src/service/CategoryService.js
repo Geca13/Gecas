@@ -4,6 +4,9 @@ const API_URL = 'http://localhost:8081/api/categories'
 
 class CategoryService {
 
-    getCategories()
+    getCategories() {
+        return axios.get(API_URL);
+    }
 
 }
+export default new CategoryService();
