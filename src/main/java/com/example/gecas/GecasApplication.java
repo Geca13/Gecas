@@ -294,22 +294,22 @@ public class GecasApplication {
 			dcRepository.save(new DrinkCategory(1L,"Alcoholic"));
 			dcRepository.save(new DrinkCategory(2L,"NonAlcoholic"));
 			
-			subRepository.save(new SubCategory(1L,"Wine","https://image.freepik.com/free-vector/glass-bottle-wine-icon_24640-19981.jpg"));
-			subRepository.save(new SubCategory(2L,"Beer","https://as2.ftcdn.net/jpg/02/69/49/73/500_F_269497335_qZ49RQoTMXkgrCZGRoVaJilE3zZBZNxG.jpg"));
-			subRepository.save(new SubCategory(3L,"Distilled Drinks","https://as1.ftcdn.net/jpg/02/42/96/80/500_F_242968054_AIk14tlvDM8B8Lh6q6rlaYxiztPRsPrt.jpg"));
-			subRepository.save(new SubCategory(4L,"Pops","https://icon-library.net/images/soda-can-icon/soda-can-icon-16.jpg"));
-			subRepository.save(new SubCategory(5L,"Water","https://previews.123rf.com/images/jemastock/jemastock2002/jemastock200243485/140837287-bottle-water-drink-isolated-icon-vector-illustration-design.jpg"));
+			subRepository.save(new SubCategory(1L,"Wine","https://image.freepik.com/free-vector/glass-bottle-wine-icon_24640-19981.jpg", categoryRepository.findById(2L).get()));
+			subRepository.save(new SubCategory(2L,"Beer","https://as2.ftcdn.net/jpg/02/69/49/73/500_F_269497335_qZ49RQoTMXkgrCZGRoVaJilE3zZBZNxG.jpg", categoryRepository.findById(2L).get()));
+			subRepository.save(new SubCategory(3L,"Distilled Drinks","https://as1.ftcdn.net/jpg/02/42/96/80/500_F_242968054_AIk14tlvDM8B8Lh6q6rlaYxiztPRsPrt.jpg", categoryRepository.findById(2L).get()));
+			subRepository.save(new SubCategory(4L,"Pops","https://icon-library.net/images/soda-can-icon/soda-can-icon-16.jpg", categoryRepository.findById(2L).get()));
+			subRepository.save(new SubCategory(5L,"Water","https://previews.123rf.com/images/jemastock/jemastock2002/jemastock200243485/140837287-bottle-water-drink-isolated-icon-vector-illustration-design.jpg", categoryRepository.findById(2L).get()));
 			
-			subRepository.save(new SubCategory(6L, "Crepes", "https://i.pinimg.com/564x/40/49/e6/4049e66b9d0a493ff20a4f1fba460a45.jpg"));
-			subRepository.save(new SubCategory(7L, "Ice-Cream", "http://www.icons101.com/icons/59/Beach_by_DaPino/128/icecream.png"));
-			subRepository.save(new SubCategory(8L, "Cakes", "https://www.pngarea.com/pngm/608/4231008_cake-icon-png-slice-of-cake-icon-png.png"));
+			subRepository.save(new SubCategory(6L, "Crepes", "https://i.pinimg.com/564x/40/49/e6/4049e66b9d0a493ff20a4f1fba460a45.jpg", categoryRepository.findById(3L).get()));
+			subRepository.save(new SubCategory(7L, "Ice-Cream", "http://www.icons101.com/icons/59/Beach_by_DaPino/128/icecream.png", categoryRepository.findById(3L).get()));
+			subRepository.save(new SubCategory(8L, "Cakes", "https://www.pngarea.com/pngm/608/4231008_cake-icon-png-slice-of-cake-icon-png.png", categoryRepository.findById(3L).get()));
 			
-			subRepository.save(new SubCategory(9L, "BBQ", "https://st2.depositphotos.com/1006689/9982/v/950/depositphotos_99829926-stock-illustration-bbq-vector-icon.jpg"));
-			subRepository.save(new SubCategory(10L, "Salads", "http://www.icons101.com/icons/95/Desktop_Buffet_by_AhaSoft/128/Salad.png"));
-			subRepository.save(new SubCategory(11L, "Fish", "http://st2.depositphotos.com/6438882/9250/v/450/depositphotos_92501282-Fish-icon-Crucian-on-white-plate-with-lemon-and-herbs-Food-seafood-dish-symbol-Vector-isolated.jpg"));
-			subRepository.save(new SubCategory(12L, "Pizza And Pasta", "https://iconape.com/wp-content/png_logo_vector/pasta-pizza-logo.png"));
-			subRepository.save(new SubCategory(13L, "Cold Plates", "https://image.freepik.com/free-vector/cheese-icon_22350-103.jpg"));
-			subRepository.save(new SubCategory(14L, "Fried Plates", "https://i.pinimg.com/564x/a4/22/7c/a4227cb35cfbbd4d35ed98e3652579e9.jpg"));
+			subRepository.save(new SubCategory(9L, "BBQ", "https://st2.depositphotos.com/1006689/9982/v/950/depositphotos_99829926-stock-illustration-bbq-vector-icon.jpg", categoryRepository.findById(1L).get()));
+			subRepository.save(new SubCategory(10L, "Salads", "http://www.icons101.com/icons/95/Desktop_Buffet_by_AhaSoft/128/Salad.png", categoryRepository.findById(1L).get()));
+			subRepository.save(new SubCategory(11L, "Fish", "http://st2.depositphotos.com/6438882/9250/v/450/depositphotos_92501282-Fish-icon-Crucian-on-white-plate-with-lemon-and-herbs-Food-seafood-dish-symbol-Vector-isolated.jpg", categoryRepository.findById(1L).get()));
+			subRepository.save(new SubCategory(12L, "Pizza And Pasta", "https://iconape.com/wp-content/png_logo_vector/pasta-pizza-logo.png", categoryRepository.findById(1L).get()));
+			subRepository.save(new SubCategory(13L, "Cold Plates", "https://image.freepik.com/free-vector/cheese-icon_22350-103.jpg", categoryRepository.findById(1L).get()));
+			subRepository.save(new SubCategory(14L, "Fried Plates", "https://i.pinimg.com/564x/a4/22/7c/a4227cb35cfbbd4d35ed98e3652579e9.jpg", categoryRepository.findById(1L).get()));
 			
 			List<SubCategory> food = new ArrayList<>();
 			food.add(subRepository.findById(9L).get());
@@ -334,9 +334,9 @@ public class GecasApplication {
 			dessert.add(subRepository.findById(8L).get());
 			
 			
-			categoryRepository.save(new Category(1L,"Food","https://previews.123rf.com/images/fdsstudio/fdsstudio1905/fdsstudio190500013/122776211-food-icon-on-white-background-cutlery-as-a-symbol-of-food-vector-logo-for-graphic-design-.jpg",food));
-			categoryRepository.save(new Category(2L,"Drink","https://i.pinimg.com/564x/c9/fd/a3/c9fda33a9ee8c9d1e12dba51552753bf.jpg",drink));
-			categoryRepository.save(new Category(3L,"Desert","https://img.freepik.com/free-vector/dessert-icon-bakery-design-vector-graphic_24908-24791.jpg?size=338&ext=jpg",dessert));
+			categoryRepository.save(new Category(1L,"Food","https://previews.123rf.com/images/fdsstudio/fdsstudio1905/fdsstudio190500013/122776211-food-icon-on-white-background-cutlery-as-a-symbol-of-food-vector-logo-for-graphic-design-.jpg"));
+			categoryRepository.save(new Category(2L,"Drink","https://i.pinimg.com/564x/c9/fd/a3/c9fda33a9ee8c9d1e12dba51552753bf.jpg"));
+			categoryRepository.save(new Category(3L,"Desert","https://img.freepik.com/free-vector/dessert-icon-bakery-design-vector-graphic_24908-24791.jpg?size=338&ext=jpg"));
 			
 			
 			fiRepository.save(new FoodItem(1L, "Margarita", 200.00, subRepository.findById(4L).get(), margarita,  "https://www.finedininglovers.com/sites/g/files/xknfdk626/files/styles/recipe_full_desktop/public/2020-09/margherita-50kalo.jpg?itok=09KbHkNy", true));

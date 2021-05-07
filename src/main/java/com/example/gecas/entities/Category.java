@@ -30,8 +30,6 @@ public class Category {
 	
 	private String imageUrl;
 	
-	@ManyToMany
-	private List<SubCategory> subs;
 	
 	
 

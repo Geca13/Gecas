@@ -26,5 +26,8 @@ public class SubCategory {
 	
 	private String imageUrl;
 	
+	@ManyToOne
+	private Category category;
+	
 	
 }
