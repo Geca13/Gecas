@@ -65,14 +65,12 @@ public class MenuController {
 	}
 	
 	
-	
-	
 	public List<DrinkItem> findAllDrinksByDrinkCategoryId(Long id) {
 		
 		return diRepository.findAllByDrCategoryId(id);
 	}
-	
-	public List<DrinkItem> findAllDrinksBySubCategoryId(Long id) {
+	@GetMapping("/drinksBySubCategory/{id}")
+	public List<DrinkItem> findAllDrinksBySubCategoryId(@PathVariable ("id")Long id) {
 		
 		return diRepository.findAllBySubId(id);
 	}
