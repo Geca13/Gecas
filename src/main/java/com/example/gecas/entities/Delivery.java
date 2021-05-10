@@ -1,8 +1,6 @@
 package com.example.gecas.entities;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,15 +18,17 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Category {
+public class Delivery {
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String category;
+	@ManyToMany
+	private List<DeliveryItem> item;
 	
-	private String imageUrl;
+	private Double tips;
 	
-	
+	private Double deliveryTotal;
+
 }
