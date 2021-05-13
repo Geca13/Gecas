@@ -25,7 +25,7 @@ public class Delivery {
 	private Long id;
 	
 	@ManyToMany
-	private List<DeliveryItem> item;
+	private List<DeliveryItem> items;
 	
 	private Double tips;
 	
