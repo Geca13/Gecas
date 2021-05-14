@@ -16,6 +16,7 @@ import com.example.gecas.entities.DrinkCategory;
 import com.example.gecas.entities.DrinkItem;
 import com.example.gecas.entities.FoodItem;
 import com.example.gecas.entities.Ingredient;
+import com.example.gecas.entities.Location;
 import com.example.gecas.entities.Producer;
 import com.example.gecas.entities.SubCategory;
 import com.example.gecas.repositories.CategoryRepository;
@@ -24,6 +25,7 @@ import com.example.gecas.repositories.DrinkCategoryRepository;
 import com.example.gecas.repositories.DrinkItemRepository;
 import com.example.gecas.repositories.FoodItemRepository;
 import com.example.gecas.repositories.IngredientRepository;
+import com.example.gecas.repositories.LocationRepository;
 import com.example.gecas.repositories.ProducerRepository;
 import com.example.gecas.repositories.SubCategoryRepository;
 
@@ -32,7 +34,8 @@ import com.example.gecas.repositories.SubCategoryRepository;
 @SpringBootApplication
 public class GecasApplication {
 
-	
+	@Autowired
+	LocationRepository locationRepository;
 	
 	@Autowired
 	DesertItemRepository ditRepository;
@@ -425,6 +428,10 @@ public class GecasApplication {
 			diRepository.save(new DrinkItem(39L,producerRepository.findById(4L).get(),"Sv. Trifun 0.5 lit",760.00,subRepository.findById(3L).get(),"https://wine.mk/wp-content/uploads/2020/04/bovin-brandy-yellow-375x400.png", true,dcRepository.findById(1L).get()));
 			diRepository.save(new DrinkItem(40L,producerRepository.findById(4L).get(),"Sv. Trifun Premium 0.5 lit",1200.00,subRepository.findById(3L).get(),"https://wine.mk/wp-content/uploads/2020/04/bovin-brandy-sv-trifun-premium-375x400.png",true,dcRepository.findById(1L).get()));
 			
+			locationRepository.save(new Location(1L, "Partizanska", "11", "1000", "Skopje", "https://i.insider.com/596e3d09dde1891cc024878c?width=700&format=jpeg&auto=webp", "076151159"));
+			locationRepository.save(new Location(2L, "Jane Sandanski", "12", "1000", "Skopje", "https://i.insider.com/596e3d09dde1891cc024878f?width=700&format=jpeg&auto=webp", "077152159"));
+			locationRepository.save(new Location(3L, "Heraklea", "13", "7000", "Bitola", "https://i.insider.com/596e3d09dde1891cc0248789?width=700&format=jpeg&auto=webp", "078153159"));
+			locationRepository.save(new Location(4L, "Turisticka", "14", "6000", "Ohrid", "https://i.insider.com/596e3d09dde1891cc024878a?width=700&format=jpeg&auto=webp", "070154159"));
 			
 			} catch (Exception e) {
 			System.err.println(e);

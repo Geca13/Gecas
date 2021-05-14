@@ -25,4 +25,8 @@ public class Location {
 	private String zipCode;
 	
 	private String city;
+	
+	private String imageUrl;
+	
+	private String phone;
 }
