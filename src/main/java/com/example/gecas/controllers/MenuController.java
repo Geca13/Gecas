@@ -9,16 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.gecas.entities.Category;
-import com.example.gecas.entities.DesertItem;
-import com.example.gecas.entities.DrinkItem;
-import com.example.gecas.entities.FoodItem;
+import com.example.gecas.entities.MenuItem;
 import com.example.gecas.entities.SubCategory;
 import com.example.gecas.repositories.CategoryRepository;
-import com.example.gecas.repositories.DesertItemRepository;
 import com.example.gecas.repositories.DrinkCategoryRepository;
-import com.example.gecas.repositories.DrinkItemRepository;
-import com.example.gecas.repositories.FoodItemRepository;
 import com.example.gecas.repositories.IngredientRepository;
+import com.example.gecas.repositories.MenuItemRepository;
 import com.example.gecas.repositories.ProducerRepository;
 import com.example.gecas.repositories.SubCategoryRepository;
 
@@ -27,17 +23,10 @@ import com.example.gecas.repositories.SubCategoryRepository;
 @RequestMapping("/api")
 public class MenuController {
 	
-	@Autowired
-	DesertItemRepository ditRepository;
+	
 	
 	@Autowired
 	DrinkCategoryRepository dcRepository;
-	
-	@Autowired
-	DrinkItemRepository diRepository;
-	
-	@Autowired
-	FoodItemRepository fiRepository;
 	
 	@Autowired
 	IngredientRepository ingredientRepository;
@@ -50,6 +39,9 @@ public class MenuController {
 	
 	@Autowired
 	SubCategoryRepository subRepository;
+	
+	@Autowired
+	MenuItemRepository itemRepository;
 	
 	
 	@GetMapping("/categories")
@@ -64,25 +56,12 @@ public class MenuController {
 		return subRepository.findAllByCategoryId(id);
 	}
 	
-	
-	public List<DrinkItem> findAllDrinksByDrinkCategoryId(Long id) {
+	@GetMapping("/items/{id}")
+	public List<MenuItem> findAllBySubCategoriesId(@PathVariable ("id")Long id) {
 		
-		return diRepository.findAllByDrCategoryId(id);
-	}
-	@GetMapping("/drinksBySubCategory/{id}")
-	public List<DrinkItem> findAllDrinksBySubCategoryId(@PathVariable ("id")Long id) {
-		
-		return diRepository.findAllBySubId(id);
+		return itemRepository.findAllBySubCategoryId(id);
 	}
 	
-	public List<FoodItem> findAllFoodItemsBySubCategoryId(Long id) {
-		
-		return fiRepository.findAllBySubCategoryId(id);
-	}
 	
-	public List<DesertItem> findAllByDesertsBySubCategoryId(Long id) {
-		
-		return ditRepository.findAllBySubId(id);
-	}
-
+	
 }

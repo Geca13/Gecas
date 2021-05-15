@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.gecas.entities.FoodItem;
+import com.example.gecas.entities.MenuItem;
 
 @Repository
-public interface FoodItemRepository extends JpaRepository<FoodItem, Long> {
+public interface MenuItemRepository extends JpaRepository<MenuItem, Long> {
 
-	List<FoodItem> findAllBySubCategoryId(Long id);
+	List<MenuItem> findAllBySubCategoryId(Long id);
 
 }
