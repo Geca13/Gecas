@@ -56,11 +56,7 @@ public class MenuController {
 		return subRepository.findAllByCategoryId(id);
 	}
 	
-	@GetMapping("/items/{id}")
-	public List<MenuItem> findAllBySubCategoriesId(@PathVariable ("id")Long id) {
-		
-		return itemRepository.findAllBySubCategoryId(id);
-	}
+	
 	
 	
 	

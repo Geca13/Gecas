@@ -10,6 +10,6 @@ import com.example.gecas.entities.MenuItem;
 @Repository
 public interface MenuItemRepository extends JpaRepository<MenuItem, Long> {
 
-	List<MenuItem> findAllBySubCategoryId(Long id);
+	
 
 }

@@ -31,9 +31,6 @@ public class MenuItem {
 	
 	private Double price;
 	
-	@ManyToOne
-	private SubCategory subCategory;
-	
 	@ManyToMany
 	private List<Ingredient> igredients = new ArrayList<>();
 	
