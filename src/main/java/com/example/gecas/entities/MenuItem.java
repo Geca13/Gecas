@@ -29,7 +29,11 @@ public class MenuItem {
 	
 	private String description;
 	
+	
 	private Double price;
+	
+	@ManyToOne
+	private SubCategory subCategory;
 	
 	@ManyToMany
 	private List<Ingredient> igredients = new ArrayList<>();
