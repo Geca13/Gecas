@@ -10,14 +10,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.gecas.entities.Category;
-import com.example.gecas.entities.DrinkCategory;
+
 import com.example.gecas.entities.Ingredient;
 import com.example.gecas.entities.Location;
 import com.example.gecas.entities.MenuItem;
 import com.example.gecas.entities.Producer;
 import com.example.gecas.entities.SubCategory;
 import com.example.gecas.repositories.CategoryRepository;
-import com.example.gecas.repositories.DrinkCategoryRepository;
+
 import com.example.gecas.repositories.IngredientRepository;
 import com.example.gecas.repositories.LocationRepository;
 import com.example.gecas.repositories.MenuItemRepository;
@@ -32,8 +32,7 @@ public class GecasApplication {
 	@Autowired
 	LocationRepository locationRepository;
 	
-	@Autowired
-	DrinkCategoryRepository dcRepository;
+
 	
 	@Autowired
 	IngredientRepository ingredientRepository;
@@ -305,8 +304,6 @@ public class GecasApplication {
 			macedonian.add(ingredientRepository.findById(44L).get());
 			
 			
-			dcRepository.save(new DrinkCategory(1L,"Alcoholic"));
-			dcRepository.save(new DrinkCategory(2L,"NonAlcoholic"));
 			
 			
 			List<SubCategory> food = new ArrayList<>();
@@ -431,8 +428,8 @@ public class GecasApplication {
 			System.err.println(e);
 		}
 	
-	
-}
+	}
+
 
 
 }

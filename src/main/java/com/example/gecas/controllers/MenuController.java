@@ -12,7 +12,7 @@ import com.example.gecas.entities.Category;
 import com.example.gecas.entities.MenuItem;
 import com.example.gecas.entities.SubCategory;
 import com.example.gecas.repositories.CategoryRepository;
-import com.example.gecas.repositories.DrinkCategoryRepository;
+
 import com.example.gecas.repositories.IngredientRepository;
 import com.example.gecas.repositories.MenuItemRepository;
 import com.example.gecas.repositories.ProducerRepository;
@@ -24,9 +24,6 @@ import com.example.gecas.repositories.SubCategoryRepository;
 public class MenuController {
 	
 	
-	
-	@Autowired
-	DrinkCategoryRepository dcRepository;
 	
 	@Autowired
 	IngredientRepository ingredientRepository;
