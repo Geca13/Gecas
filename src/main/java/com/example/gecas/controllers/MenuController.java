@@ -66,6 +66,12 @@ public class MenuController {
 		return itemRepository.findById(id).get();
 	}
 	
+	@GetMapping("/items")
+	public List<MenuItem> findAllItems() {
+		
+		return itemRepository.findAll();
+	}
+	
 	
 	
 }

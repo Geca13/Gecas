@@ -332,7 +332,7 @@ public class GecasApplication {
 			
 			
 			
-			itemRepository.save(new MenuItem(1L,null, "Margarita", 200.00, subRepository.findById(12L).get(), margarita,  "https://www.finedininglovers.com/sites/g/files/xknfdk626/files/styles/recipe_full_desktop/public/2020-09/margherita-50kalo.jpg?itok=09KbHkNy", true));
+			itemRepository.save(new MenuItem(1L,null, "Margarita", 200.00, subRepository.findById(12L).get(), margarita,  "https://www.finedininglovers.com/sites/g/files/xknfdk626/files/styles/recipe_full_desktop/public/2020-09/margherita-50kalo.jpg?itok=09KbHkNy", false));
 			itemRepository.save(new MenuItem(2L,null, "Caprichioza", 250.00, subRepository.findById(12L).get(), caprichioza,  "https://www.goingmywayz.com/wp-content/uploads/2017/03/pizza-Capricciosa2.jpg", true));
 			itemRepository.save(new MenuItem(3L,null, "Vegeterijana", 250.00, subRepository.findById(12L).get(), vegeterian,  "https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2018/June-07/No_Yeast_Thin_Crust_Veggie_Pizza_Recipe-1.jpg", true));
 			itemRepository.save(new MenuItem(4L,null, "Quatro Formagio", 350.00, subRepository.findById(12L).get(), quatro,  "https://www.schaer.com/sites/default/files/styles/header_large/public/HeaderProducts_Pizza%204%20Formaggi.webp?itok=hfBO_0un", true));
@@ -365,7 +365,7 @@ public class GecasApplication {
 			producerRepository.save(new Producer(8L, "Gorska"));
 			producerRepository.save(new Producer(9L, "Jack Daniel's"));
 			
-			itemRepository.save(new MenuItem(23L,null,"Honey And Nuts", 150.00, subRepository.findById(6L).get(),honey,"https://thumbs.dreamstime.com/z/crepes-honey-nuts-crepes-suzette-honey-nuts-white-plate-over-dark-background-copy-space-delicious-homemade-107134983.jpg", true));
+			itemRepository.save(new MenuItem(23L,null,"Honey And Nuts", 150.00, subRepository.findById(6L).get(),honey,"https://thumbs.dreamstime.com/z/crepes-honey-nuts-crepes-suzette-honey-nuts-white-plate-over-dark-background-copy-space-delicious-homemade-107134983.jpg", false));
 			itemRepository.save(new MenuItem(24L,null,"Cream And Banana", 150.00, subRepository.findById(6L).get(),banana , "https://previews.123rf.com/images/rakratchada/rakratchada1305/rakratchada130500157/20008883-banana-crepe-rolls-filled-with-white-cream-and-banana-topping-with-chocolate-syrup-served-with-whipp.jpg", true));
 			itemRepository.save(new MenuItem(25L,null,"Nutella And Vanilla", 150.00, subRepository.findById(7L).get(),nutella, "https://i2.wp.com/bakingmischief.com/wp-content/uploads/2018/11/nutella-sauce-photo-683x1024.jpg",  true));
 			itemRepository.save(new MenuItem(26L,null,"Mixed Forest Fruits", 150.00, subRepository.findById(7L).get(),forest, "https://barefeetinthekitchen.com/wp-content/uploads/2013/02/Mixed-Berry-Ice-Cream-6-1-of-1-1024x732.jpg", true));
@@ -398,7 +398,7 @@ public class GecasApplication {
 			itemRepository.save(new MenuItem(50L,producerRepository.findById(7L).get(),"Pelisterka Gazirana 0.75 lit",70.00,subRepository.findById(5L).get(),null,"https://balkanwater.md/wp-content/uploads/2020/11/pg75.png",true));
 			itemRepository.save(new MenuItem(51L,producerRepository.findById(7L).get(),"Pelisterka Negazirana 0.75 lit",70.00,subRepository.findById(5L).get(),null,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXv00nVksOXiPJK-8DPPUDd6W6RlxZ1w4cJVMgQNFtxY3rRmCi49AWq3T1aZvSjs2_xrQ&usqp=CAU", true));
 			
-			itemRepository.save(new MenuItem(52L,producerRepository.findById(3L).get(),"Special Selection 0.75 lit",1000.00,subRepository.findById(1L).get(),null,"https://www.ediskont.rs/uploads/store/products/thumbnails/tmb-merlot-special-selection-tikves-075l-60412e1726ac4.jpg",true));
+			itemRepository.save(new MenuItem(52L,producerRepository.findById(3L).get(),"Special Selection 0.75 lit",1000.00,subRepository.findById(1L).get(),null,"https://www.ediskont.rs/uploads/store/products/thumbnails/tmb-merlot-special-selection-tikves-075l-60412e1726ac4.jpg",false));
 			itemRepository.save(new MenuItem(53L,producerRepository.findById(3L).get(),"Alexandria Couve 0.75 lit",1140.00,subRepository.findById(1L).get(),null,"https://www.ediskont.rs/uploads/store/products/thumbnails/tmb-tikves_alexandria_cuvee_rose_075l_381.jpg", true));
 			itemRepository.save(new MenuItem(54L,producerRepository.findById(3L).get(),"T'ga za Jug 0.75 lit",790.00,subRepository.findById(1L).get(),null,"https://www.ediskont.rs/uploads/store/products/thumbnails/tmb-tga_za_jug_tikves_075l_145.jpg",true));
 			itemRepository.save(new MenuItem(55L,producerRepository.findById(3L).get(),"Temjanika 0.75 lit",770.00,subRepository.findById(1L).get(),null,"https://www.ediskont.rs/uploads/store/products/thumbnails/tmb-temjanika_tikves_075l_992.jpg", true));
