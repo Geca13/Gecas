@@ -41,7 +41,7 @@ public class MenuItem {
 	
 	private String imageUrl;
 	
-	private Boolean isAvailable;
+	private Integer qty;
 	
 	
 
