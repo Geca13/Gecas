@@ -136,7 +136,12 @@ public class MenuController {
 	
 	@PostMapping("/newItem")
 	public MenuItem newItem(@RequestBody MenuItem item) {
-		return itemRepository.save(item);
+		MenuItem newItem = new MenuItem();
+		
+		newItem .setId(Long.valueOf(item.getId()));
+		newItem.setDescription(item.getDescription());
+		newItem.setPrice(Double.valueOf(item.getPrice()));
+		return itemRepository.save(newItem);
 	}
 	
 	@GetMapping("/allIngredients")
