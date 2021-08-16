@@ -6,9 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.gecas.entities.Category;
+import com.example.gecas.entities.Ingredient;
 import com.example.gecas.entities.MenuItem;
 import com.example.gecas.entities.SubCategory;
 import com.example.gecas.repositories.CategoryRepository;
@@ -71,6 +74,77 @@ public class MenuController {
 		
 		return itemRepository.findAll();
 	}
+	
+	@PostMapping("/item/{id}/newDescription")
+	public MenuItem updateItemDescription(@PathVariable("id") Long id, MenuItem item) {
+		
+		MenuItem itemForUpdate = itemRepository.findById(id).get();
+		itemForUpdate.setDescription(item.getDescription());
+		
+		return itemRepository.save(itemForUpdate);
+		
+	}
+	
+	@PostMapping("/item/{id}/addQuantity")
+	public MenuItem updateItemQty(@PathVariable("id") Long id, MenuItem item) {
+		
+		MenuItem itemForUpdate = itemRepository.findById(id).get();
+		itemForUpdate.setQty(itemForUpdate.getQty() + item.getQty());
+		
+		return itemRepository.save(itemForUpdate);
+		
+	}
+	
+	@PostMapping("/item/{id}/newPrice")
+	public MenuItem updateItemPrice(@PathVariable("id") Long id, MenuItem item) {
+		
+		MenuItem itemForUpdate = itemRepository.findById(id).get();
+		itemForUpdate.setPrice(item.getPrice());
+		
+		return itemRepository.save(itemForUpdate);
+		
+	}
+	
+	@PostMapping("/item/{id}/newProducer")
+	public MenuItem updateItemProducer(@PathVariable("id") Long id, MenuItem item) {
+		
+		MenuItem itemForUpdate = itemRepository.findById(id).get();
+		itemForUpdate.setProducer(item.getProducer());
+		
+		return itemRepository.save(itemForUpdate);
+		
+	}
+	@PostMapping("/item/{id}/newSubcategory")
+	public MenuItem updateItemSubCategory(@PathVariable("id") Long id, MenuItem item) {
+		
+		MenuItem itemForUpdate = itemRepository.findById(id).get();
+		itemForUpdate.setSubCategory(item.getSubCategory());
+		
+		return itemRepository.save(itemForUpdate);
+		
+	}
+	
+	@PostMapping("/item/{id}/newIngredients")
+	public MenuItem updateItemIngredients(@PathVariable("id") Long id, MenuItem item) {
+		
+		MenuItem itemForUpdate = itemRepository.findById(id).get();
+		itemForUpdate.setIgredients(item.getIgredients());
+		
+		return itemRepository.save(itemForUpdate);
+		
+	}
+	
+	@PostMapping("/newItem")
+	public MenuItem newItem(@RequestBody MenuItem item) {
+		return itemRepository.save(item);
+	}
+	
+	@GetMapping("/allIngredients")
+	public List<Ingredient> getAllIngredients (){
+		return ingredientRepository.findAll();
+		
+	}
+	
 	
 	
 	
