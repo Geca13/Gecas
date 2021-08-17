@@ -12,7 +12,7 @@ public interface SubCategoryRepository extends JpaRepository<SubCategory, Long> 
 
 	List<SubCategory> findAllByCategoryId(Long id);
 
-	SubCategory findByDescription(String description);
+	SubCategory findBySubCategoryName(String subCategoryName);
 
 	
 

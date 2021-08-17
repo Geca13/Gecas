@@ -50,6 +50,12 @@ public class MenuController {
 		return categoryRepository.findAll();
 	}
 	
+	@GetMapping("/subCategories")
+	public List<SubCategory> findAllSubCategories() {
+		
+		return subRepository.findAll();
+	}
+	
 	@GetMapping("/subCategories/{id}")
 	public List<SubCategory> findAllByCategoryId(@PathVariable ("id")Long id) {
 		
@@ -137,7 +143,7 @@ public class MenuController {
 	@PostMapping("/newItem")
 	public MenuItem newItem(@RequestBody MenuItem item) {
 		MenuItem newItem = new MenuItem();
-		SubCategory sub = subRepository.findByDescription(item.getSubCategory().getDescription());
+		SubCategory sub = subRepository.findBySubCategoryName(item.getSubCategory().getSubCategoryName());
 		
 		newItem .setId(Long.valueOf(item.getId()));
 		newItem.setDescription(item.getDescription());

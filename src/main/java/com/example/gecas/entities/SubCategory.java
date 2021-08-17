@@ -22,7 +22,7 @@ public class SubCategory {
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String description;
+	private String subCategoryName;
 	
 	private String imageUrl;
 	
