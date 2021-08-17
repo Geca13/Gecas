@@ -137,12 +137,20 @@ public class MenuController {
 	@PostMapping("/newItem")
 	public MenuItem newItem(@RequestBody MenuItem item) {
 		MenuItem newItem = new MenuItem();
+		SubCategory sub = subRepository.findByDescription(item.getSubCategory().getDescription());
 		
 		newItem .setId(Long.valueOf(item.getId()));
 		newItem.setDescription(item.getDescription());
 		newItem.setPrice(Double.valueOf(item.getPrice()));
+		newItem.setImageUrl(item.getImageUrl());
+		newItem.setQty(Integer.valueOf(item.getQty()));
+		
+		newItem.setSubCategory(item.getSubCategory());
+		
 		return itemRepository.save(newItem);
 	}
+	
+	
 	
 	@GetMapping("/allIngredients")
 	public List<Ingredient> getAllIngredients (){
